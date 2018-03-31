@@ -1,0 +1,1 @@
+export const limit = 10; //max limit data shown on chart
