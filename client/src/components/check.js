@@ -13,16 +13,11 @@ class Check extends Component {
         this.state = {
             yourValue: 0,
             toggleResult: 'hide',
-            toggleLoading: 'hide',
             chanId: ''
         }
     }
 
     getYourValue(value){
-        //set loading state
-        this.setState({
-            toggleLoading: 'show'
-        })
 
         //initialize web socket
         const wss = BTCWebsocket()
@@ -85,12 +80,6 @@ class Check extends Component {
                                     <Search placeholder="Enter your Bitcoin amount" onSearch={value => this.getYourValue(value)} enterButton="Check Value" size="large" />
                                 </div>
                             </div><br />
-                            <div className={this.state.toggleLoading}>
-                                <div className="preloader">
-                                    <svg className="circular" viewBox="25 25 50 50">
-                                  <circle className="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-                                </div>
-                            </div>
                             <div className={this.state.toggleResult}>
                                 <div className="row">
                                     <div className="col-md-12">

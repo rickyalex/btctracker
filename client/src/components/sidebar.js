@@ -11,9 +11,9 @@ class Sidebar extends Component {
                             <ul id="sidebarnav">
                                 <li className="nav-devider"></li>
                                 <li className="nav-label">Home</li>
-                                <li><a href="#"><Link to="/">Dashboard</Link></a></li>
-                                <li><a href="#"><Link to="/search">Search</Link></a></li>
-                                <li><a href="#"><Link to="/check">Check</Link></a></li>
+                                <li><Link to="/">Dashboard</Link></li>
+                                <li><Link to="/search">Search</Link></li>
+                                <li><Link to="/check">Check</Link></li>
                             </ul>
                         </nav>
                     </div>

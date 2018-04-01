@@ -62,12 +62,12 @@ class Dashboard extends Component {
                     this.Times.push(now)
 
                     //post the data to api
-                    // axios.post('/api/btc', this.state)
-                    //     .then((response) => {
-                    //         console.log(response)
-                    //     }, (err) => {
-                    //         console.error(err)
-                    //     })
+                    axios.post('/api/btc', this.state)
+                        .then((response) => {
+                            console.log(response)
+                        }, (err) => {
+                            console.error(err)
+                        })
                 });
             }
         }
