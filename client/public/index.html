@@ -12,10 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <title>Ricky Alexander - BTC Tracker</title>
     <!-- Bootstrap Core CSS -->
-    <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet" media="all">
-    <!-- Custom CSS -->
-    <link href="css/helper.min.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:** -->
     <!--[if lt IE 9]>
@@ -25,15 +22,16 @@
 </head>
 
 <body class="fix-header fix-sidebar">
-    <!-- Preloader - style you can find in spinners.css -->
-    <div class="preloader">
-        <svg class="circular" viewBox="25 25 50 50">
-      <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
-    </div>
     <!-- Main wrapper  -->
     <div id="root">
     </div>
     <!-- End Wrapper -->
+    <link href="css/lib/bootstrap/bootstrap.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    <!-- Custom CSS -->
+    <style>
+        .f-s-40{font-size:40px!important}.p-30{padding:30px!important}
+    </style>
+    <link href="css/style.min.css" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
     <!-- All Jquery -->
     <script src="js/lib/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
