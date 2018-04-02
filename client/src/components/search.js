@@ -46,26 +46,18 @@ class Search extends Component {
         }];
         
         return (
-                <div>
+                <div className="wrapper">
                     <Header />
-                    <Sidebar />
-                    <div className="page-wrapper">
-                        <div className="row page-titles">
-                            <div className="col-md-5 align-self-center">
-                                <h3 className="text-primary">Search</h3>
-                            </div>
+                    <div className="left-layout">
+                      <Sidebar />
+                    </div>
+                    <div className="right-layout">
+                      <div style={{ padding: '0 20px 20px 20px' }} >
+                          <h3><b>Search</b></h3><br />
+                          <Table columns={columns} dataSource={this.state.data} size="small" />
                         </div>
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <Table columns={columns} dataSource={this.state.data} size="small" />
-                                </div>
-                            </div>
-                        </div>
-                        <Footer />
                     </div>
                 </div>
-
         )
     }
 

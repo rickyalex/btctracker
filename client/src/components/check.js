@@ -65,34 +65,23 @@ class Check extends Component {
         const Search = Input.Search
         
         return (
-                <div>
+                <div className="wrapper">
                     <Header />
-                    <Sidebar />
-                    <div className="page-wrapper">
-                        <div className="row page-titles">
-                            <div className="col-md-5 align-self-center">
-                                <h3 className="text-primary">Check</h3>
-                            </div>
+                    <div className="left-layout">
+                      <Sidebar />
+                    </div>
+                    <div className="right-layout">
+                        <div style={{ padding: '0 20px 20px 20px' }}>
+                            <h3><b>Check</b></h3><br />
+                              <Search placeholder="Enter your Bitcoin amount" onSearch={value => this.getYourValue(value)} enterButton="Check Value" size="large" />
+                              <br /><br />
+                              <div className={this.state.toggleResult}>
+                                <span>Your Value is :</span><br />
+                                <h2>${this.state.yourValue}</h2>        
+                              </div>
                         </div>
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <Search placeholder="Enter your Bitcoin amount" onSearch={value => this.getYourValue(value)} enterButton="Check Value" size="large" />
-                                </div>
-                            </div><br />
-                            <div className={this.state.toggleResult}>
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <span>Your Value is :</span><br />
-                                        <h2>${this.state.yourValue}</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <Footer />
                     </div>
                 </div>
-
         )
     }
 

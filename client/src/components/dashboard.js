@@ -173,76 +173,14 @@ class Dashboard extends Component {
              }
         }
         return (
-                <div>
-                    <div className="row page-titles">
-                        <div className="col-md-5 align-self-center">
-                            <h3 className="text-primary">Dashboard</h3>
-                        </div>
-                    </div>
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-md-4">
-                                <div className="card p-30">
-                                    <div className="media">
-                                        <div className="media-left meida media-middle">
-                                            <span>
-                                                {
-                                                    (this.Datas.length>=3) ? (this.state.Ask > this.Datas[this.Datas.length-1].Ask) ? <i className="fa fa-arrow-circle-up f-s-40 color-success"></i> : <i className="fa fa-arrow-circle-down f-s-40 color-danger"></i> : <i className="fa fa-arrows-alt-h f-s-40 color-default"></i>
-                                                }
-                                            </span>
-                                        </div>
-                                        <div className="media-body media-text-right">
-                                            <h2>${this.state.Ask}</h2>
-                                            <p className="m-b-0">Ask</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card p-30">
-                                    <div className="media">
-                                        <div className="media-left meida media-middle">
-                                            <span>
-                                                {
-                                                    (this.Datas.length>=3) ? (this.state.Last > this.Datas[this.Datas.length-1].Last) ? <i className="fa fa-arrow-circle-up f-s-40 color-success"></i> : <i className="fa fa-arrow-circle-down f-s-40 color-danger"></i> : <i className="fa fa-arrows-alt-h f-s-40 color-default"></i>
-                                                }
-                                            </span>
-                                        </div>
-                                        <div className="media-body media-text-right">
-                                            <h2>${this.state.Last}</h2>
-                                            <p className="m-b-0">Last</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card p-30">
-                                    <div className="media">
-                                        <div className="media-left meida media-middle">
-                                            <span>
-                                                {
-                                                    (this.Datas.length>=3) ? (this.state.Bid > this.Datas[this.Datas.length-1].Bid) ? <i className="fa fa-arrow-circle-up f-s-40 color-success"></i> : <i className="fa fa-arrow-circle-down f-s-40 color-danger"></i> : <i className="fa fa-arrows-alt-h f-s-40 color-default"></i>
-                                                }
-                                            </span>
-                                        </div>
-                                        <div className="media-body media-text-right">
-                                            <h2>${this.state.Ask}</h2>
-                                            <p className="m-b-0">Bid</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="row bg-white box-shadow">
-                            <div className="col-lg-12">
-                                <div className="card">
-                                    <div className="card-body">
-                                        <h4 className="card-title">Ticker Chart</h4>
-                                        <Line data={arr} options={chartOptions} width="600" height="250"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div style={{ padding: '0 20px 20px 20px' }}>
+                    <h3><b>Dashboard</b></h3>
+                    <div className="container">
+                        <span>Ask : ${this.state.Ask}</span><br />
+                        <span>Last : ${this.state.Last}</span><br />
+                        <span>Bid : ${this.state.Bid}</span><br />
+                        <h4 className="card-title">Ticker Chart</h4>
+                        <Line data={arr} options={chartOptions} width="600" height="250"/>    
                     </div>
                 </div>  
         )

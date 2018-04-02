@@ -9,13 +9,14 @@ import Footer from './components/footer.js';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Header />
-        <Sidebar />
-        <div className="page-wrapper">
-        	<Dashboard />
-			<Footer />
-		</div>
+        <div className="left-layout">
+          <Sidebar />
+        </div>
+        <div className="right-layout">
+          <Dashboard />
+        </div>
       </div>
     );
   }
