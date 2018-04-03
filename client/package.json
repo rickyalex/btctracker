@@ -2,7 +2,7 @@
   "name": "btctracker",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:8080/",
+  "proxy": "https://btctracker.herokuapp.com",
   "dependencies": {
     "antd": "^3.3.3",
     "autoprefixer": "7.1.6",

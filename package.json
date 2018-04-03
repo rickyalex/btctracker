@@ -22,6 +22,7 @@
   "homepage": "https://github.com/rickyalex/btctracker#readme",
   "dependencies": {
     "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
     "express": "^4.16.3",
     "mongodb": "^3.0.4",
     "node-fetch": "^2.1.1",

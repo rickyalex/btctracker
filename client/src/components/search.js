@@ -17,7 +17,7 @@ class Search extends Component {
 
     componentDidMount(){
         //get the data as soon the page completes loading
-        axios.get('/api/search')
+        axios.get('https://btctracker.herokuapp.com/api/search')
             .then((response) => {
                 console.log(response.data.result);
                 this.setState({

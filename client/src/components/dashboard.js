@@ -62,7 +62,7 @@ class Dashboard extends Component {
                     this.Times.push(now)
 
                     //post the data to api
-                    axios.post('/api/btc', this.state)
+                    axios.post('https://btctracker.herokuapp.com/api/btc', this.state)
                         .then((response) => {
                             console.log(response)
                         }, (err) => {
