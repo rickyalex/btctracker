@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BTCWebsocket } from './helper.js';
 import Header from './header.js';
 import Sidebar from './sidebar.js';
-import Footer from './footer.js';
 import { Input } from 'antd';
 
 class Check extends Component {

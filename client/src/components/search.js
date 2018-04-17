@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './header.js';
 import Sidebar from './sidebar.js';
-import Footer from './footer.js';
 import axios from 'axios';
 import { Table } from 'antd';
 
